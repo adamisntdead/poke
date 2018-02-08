@@ -1,12 +1,19 @@
 {
   "name": "site-poke",
   "version": "1.0.0",
-  "description": "Recursivly looks for refernces to missing content and images over 500kb on a given site",
-  "main": "app.js",
-  "repository": "http://github.com/togetherdigital/poke",
+  "description": "Recursivly looks for references to missing content and images over 500kb on a given site",
+  "main": "lib/index.js",
+  "repository": "",
   "author": "Adam Kelly",
   "license": "MIT",
   "dependencies": {
-    "commander": "^2.14.1"
+    "broken-link-checker": "^0.7.7",
+    "chalk": "^2.3.0",
+    "commander": "^2.14.1",
+    "ora": "^1.4.0",
+    "remote-file-size": "^3.0.4"
+  },
+  "bin": {
+    "poke": "./bin/app.js"
   }
 }
