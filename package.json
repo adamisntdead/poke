@@ -1,6 +1,6 @@
 {
   "name": "site-poke",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Recursivly looks for references to missing content and images over 500kb on a given site",
   "main": "lib/index.js",
   "repository": "git@github.com:adamisntdead/poke.git",
