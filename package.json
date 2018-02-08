@@ -1,15 +1,11 @@
 {
   "name": "site-poke",
-  "version": "1.1.0",
+  "version": "1.1.2",
   "description": "Recursivly looks for references to missing content and images over 500kb on a given site",
   "main": "lib/index.js",
-  "repository": {
-    "type" : "git",
-    "url" : "https://github.com/adamisntdead/poke.git"
+  "bin": {
+    "poke": "bin/app.js"
   },
-  "homepage": "https://github.com/adamisntdead/poke#readme",
-  "author": "Adam Kell <adamkelly2201@gmail.com>",
-  "license": "MIT",
   "dependencies": {
     "broken-link-checker": "^0.7.7",
     "chalk": "^2.3.0",
@@ -17,7 +13,21 @@
     "ora": "^1.4.0",
     "remote-file-size": "^3.0.4"
   },
-  "bin": {
-    "poke": "./bin/app.js"
-  }
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adamisntdead/poke.git"
+  },
+  "keywords": [
+    "site",
+    "check",
+    "images",
+    "links",
+    "broken"
+  ],
+  "author": "Adam Kelly",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/adamisntdead/poke/issues"
+  },
+  "homepage": "https://github.com/adamisntdead/poke#readme"
 }
