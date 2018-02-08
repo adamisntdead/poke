@@ -1,11 +1,11 @@
 # Poke
-[![npm](https://img.shields.io/npm/v/site-poke.svg)](https://www.npmjs.com/package/site-poke)
+[![npm](https://img.shields.io/npm/v/poke-cli.svg)](https://www.npmjs.com/package/poke-cli)
 
 A simple tool to check your site for broken links, media, iframes, stylesheets, scripts, forms or metadata.
 
 ## Usage
 
-1. Install it: `npm install -g site-poke`
+1. Install it: `npm install -g poke-cli`
 2. Run it: `poke <url>` where <url> is the base of the site you want to test
 3. Profit
 
@@ -24,6 +24,6 @@ Sample Output
 ![Sample Output](https://raw.githubusercontent.com/adamisntdead/poke/master/screenshot.png)
 ## Todo
 
-* Could add reasosn for content being broken?
+* Could add reason for content being broken?
 * Choose max size for images
 * more tests
