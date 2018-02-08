@@ -21,17 +21,7 @@ A simple tool to check your site for broken links, media, iframes, stylesheets, 
 
 Sample Output
 
-```
-$ poke http://localhost:4000/
-
-Missing / Broken Content Found :(
-http://localhost:4000/request-a-demo
-http://localhost:4000/terms
-http://localhost:4000/news/
-
-No Images Over 500kb :)
-```
-
+![Sample Output](https://raw.githubusercontent.com/adamisntdead/poke/master/screenshot.png)
 ## Todo
 
 * Could add reasosn for content being broken?
