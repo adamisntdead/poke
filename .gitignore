@@ -1,0 +1,10 @@
+# NodeJS & Bower Files
+node_modules
+npm-debug.log
+
+# OSX Files
+*.DS_Config
+*.DS_Store
+
+*.sublime-project
+*.sublime-workspace

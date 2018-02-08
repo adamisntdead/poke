@@ -1,0 +1,12 @@
+{
+  "name": "site-poke",
+  "version": "1.0.0",
+  "description": "Recursivly looks for refernces to missing content and images over 500kb on a given site",
+  "main": "app.js",
+  "repository": "http://github.com/togetherdigital/poke",
+  "author": "Adam Kelly",
+  "license": "MIT",
+  "dependencies": {
+    "commander": "^2.14.1"
+  }
+}
