@@ -7,11 +7,11 @@
     "poke": "bin/app.js"
   },
   "dependencies": {
-    "broken-link-checker": "^0.7.7",
-    "chalk": "^2.3.0",
+    "broken-link-checker": "^0.7.8",
+    "chalk": "^2.3.2",
     "cli-truncate": "^1.1.0",
-    "commander": "^2.14.1",
-    "ora": "^1.4.0",
+    "commander": "^2.15.0",
+    "ora": "^2.0.0",
     "remote-file-size": "^3.0.4"
   },
   "repository": {
@@ -30,5 +30,9 @@
   "bugs": {
     "url": "https://github.com/adamisntdead/poke/issues"
   },
-  "homepage": "https://github.com/adamisntdead/poke#readme"
+  "homepage": "https://github.com/adamisntdead/poke#readme",
+  "devDependencies": {
+    "cors": "^2.8.4",
+    "express": "^4.16.3"
+  }
 }
