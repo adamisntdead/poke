@@ -21,7 +21,8 @@ A simple tool to check your site for broken links, media, iframes, stylesheets, 
 
 Sample Output
 
-![Sample Output](https://raw.githubusercontent.com/adamisntdead/poke/master/screenshot.png)
+![Sample Output](https://raw.githubusercontent.com/adamisntdead/poke/master/test/public/screenshot.png)
+
 ## Todo
 
 * Could add reason for content being broken?
