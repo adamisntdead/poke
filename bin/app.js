@@ -10,6 +10,7 @@ program
   .version(package.version)
   .arguments('<url>')
   .option('-r, --retry [value]', 'Broken links are retried with new hostname')
+  .option('-s, --shallow', 'Do not check pages rooted outside of provided url')
   .action(url => {
     givenUrl = url;
   });
@@ -23,4 +24,5 @@ if (!givenUrl) {
 
 poke(givenUrl, {
   retry: program.retry,
+  shallow: program.shallow,
 });
