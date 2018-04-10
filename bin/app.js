@@ -1,23 +1,26 @@
 #!/usr/bin/env node
-const program = require('commander')
-const chalk = require('chalk')
-const package = require('../package')
-const poke = require('../lib')
+const program = require('commander');
+const chalk = require('chalk');
+const package = require('../package');
+const poke = require('../lib');
 
-let givenUrl = ''
+let givenUrl = '';
 
-program 
+program
   .version(package.version)
   .arguments('<url>')
-  .action((url) => {
-    givenUrl = url
-  })
+  .option('-r, --retry [value]', 'Broken links are retried with new hostname')
+  .action(url => {
+    givenUrl = url;
+  });
 
-program.parse(process.argv)
+program.parse(process.argv);
 
 if (!givenUrl) {
-  console.error(chalk.red('Error: No URL Given'))
-  process.exit(1)
-} 
+  console.error(chalk.red('Error: No URL Given'));
+  process.exit(1);
+}
 
-poke(givenUrl)
+poke(givenUrl, {
+  retry: program.retry,
+});
