@@ -15,22 +15,28 @@ Will also test for images over 500kb.
 ```
   Usage: poke [options] <url>
 
-
   Options:
 
-    -V, --version  output the version number
-    -h, --help     output usage information
+    -V, --version        Output the version number
+    -r, --retry [value]  Broken links are retried with new hostname
+    -s, --shallow        Do not check pages rooted outside of provided url
+    -h, --help           Output usage information
 ```
 
 Sample Output
 
 ![Sample Output](https://raw.githubusercontent.com/adamisntdead/poke/master/test/public/screenshot.png)
 
+Usually you should run with the `--shallow` option, otherwise you might get into checking for broken links in twitter or another external site, which you may not want!
 ## Todo
 
 * Could add reason for content being broken?
 * Choose max size for images
-* more tests
+* More tests
 * Find duplicate pages (Md5 hash each page)
 * SEO data too lang, short, missing or duplicated
 * Multiple Processes?
+
+## License
+
+MIT
