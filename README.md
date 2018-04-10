@@ -1,7 +1,7 @@
 # Poke
 [![npm](https://img.shields.io/npm/v/poke-site.svg)](https://www.npmjs.com/package/poke-site)
 [![Build Status](https://travis-ci.org/adamisntdead/poke.svg?branch=master)](https://travis-ci.org/adamisntdead/poke)
-
+[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 A simple tool to check your site for broken links, media, iframes, stylesheets, scripts, forms or metadata.
 Will also test for images over 500kb.
