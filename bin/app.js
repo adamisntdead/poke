@@ -27,4 +27,6 @@ poke(givenUrl, {
   retry: program.retry,
   shallow: program.shallow,
   maxImageSize: program.maxImgSize || 500
+}, () => {
+  process.exit(0)
 })
