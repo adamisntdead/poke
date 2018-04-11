@@ -11,6 +11,7 @@ program
   .arguments('<url>')
   .option('-r, --retry [value]', 'broken links are retried with new hostname')
   .option('-s, --shallow', 'do not check pages rooted outside of provided url')
+  .option('-m, --max-img-size [value]', 'looks for images that are over this size in kb. Defaults to 500')
   .action(url => {
     givenUrl = url
   })
@@ -24,5 +25,6 @@ if (!givenUrl) {
 
 poke(givenUrl, {
   retry: program.retry,
-  shallow: program.shallow
+  shallow: program.shallow,
+  maxImageSize: program.maxImgSize || 500
 })
