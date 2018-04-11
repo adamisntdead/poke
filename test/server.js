@@ -1,18 +1,13 @@
-const express = require('express')
-const cors = require('cors')
-const path = require('path')
+var http = require('http')
 
-const port = process.env.PORT || 8080
+var finalhandler = require('finalhandler')
+var serveStatic = require('serve-static')
 
-function newServer (callback) {
-  const app = express()
+var serve = serveStatic('./test/public/')
 
-  app.use(cors)
-  app.use(express.static(path.join(__dirname, 'public')))
+var server = http.createServer(function (req, res) {
+  var done = finalhandler(req, res)
+  serve(req, res, done)
+})
 
-  return app.listen(port, () => {
-    callback(port, app)
-  })
-}
-
-module.exports = newServer
+server.listen(8000)
