@@ -25,7 +25,7 @@ Will also test for images over 500kb.
 
 Sample Output
 
-![Sample Output](https://raw.githubusercontent.com/adamisntdead/poke/master/test/public/screenshot.png)
+![Sample Output](https://raw.githubusercontent.com/adamisntdead/poke/master/test/public/output.png)
 
 Usually you should run with the `--shallow` option, otherwise you might get into checking for broken links in twitter or another external site, which you may not want!
 
