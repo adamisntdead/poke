@@ -15,9 +15,9 @@ program
     '-m, --max-img-size [value]',
     'looks for images that are over this size in kb. Defaults to 500'
   )
-  .option('-q, --quiet', 'Supress warnings and loading messages(for ci)')
+  .option('-q, --quiet', 'Suppress warnings and loading messages(for ci)')
   .option(
-    '-m, --method [head|post]',
+    '--method [head|post]',
     'HTTP method used to check links, defaults to head'
   )
   .option('--skip-images', 'Skip the image checks')
