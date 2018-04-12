@@ -37,10 +37,23 @@
     "finalhandler": "^1.1.1",
     "jest": "^22.4.2",
     "serve-static": "^1.13.2",
+    "lint-staged": "^7.0.4",
+    "pre-commit": "^1.2.2",
+    "pre-push": "^0.1.1",
     "standard": "^11.0.1"
   },
   "scripts": {
     "test": "standard && node test.js",
-    "standard": "standard --fix"
-  }
+    "standard": "standard --fix",
+    "check-standard": "standard",
+    "lint-staged": "lint-staged"
+  },
+  "lint-staged": {
+    "*.js": [
+      "npm run standard",
+      "git add"
+    ]
+  },
+  "pre-commit": "lint-staged",
+  "pre-push": "check-standard"
 }

@@ -11,7 +11,17 @@ program
   .arguments('<url>')
   .option('-r, --retry [value]', 'broken links are retried with new hostname')
   .option('-s, --shallow', 'do not check pages rooted outside of provided url')
-  .option('-m, --max-img-size [value]', 'looks for images that are over this size in kb. Defaults to 500')
+  .option(
+    '-m, --max-img-size [value]',
+    'looks for images that are over this size in kb. Defaults to 500'
+  )
+  .option('-q, --quiet', 'Supress warnings and loading messages(for ci)')
+  .option(
+    '-m, --method [head|post]',
+    'HTTP method used to check links, defaults to head'
+  )
+  .option('--skip-images', 'Skip the image checks')
+  .option('--skip-duplicates', 'Skip the duplicate page checks')
   .action(url => {
     givenUrl = url
   })
@@ -23,10 +33,27 @@ if (!givenUrl) {
   process.exit(1)
 }
 
-poke(givenUrl, {
-  retry: program.retry,
-  shallow: program.shallow,
-  maxImageSize: program.maxImgSize || 500
-}, () => {
-  process.exit(0)
-})
+if (
+  program.method &&
+  (program.method.toLowerCase() !== 'get' &&
+    program.method.toLowerCase() !== 'head')
+) {
+  console.error(chalk.red('Error: method must be head or get'))
+  process.exit(1)
+}
+
+poke(
+  givenUrl,
+  {
+    retry: program.retry,
+    shallow: program.shallow,
+    quiet: program.quiet,
+    method: program.method || 'head',
+    skipImages: program.skipImages,
+    skipDuplicates: program.skipDuplicates,
+    maxImageSize: program.maxImgSize || 500
+  },
+  success => {
+    success ? process.exit(0) : process.exit(1)
+  }
+)
