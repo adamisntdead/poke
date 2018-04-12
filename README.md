@@ -17,10 +17,13 @@ Will also test for images over 500kb.
 
   Options:
 
-    -V, --version        Output the version number
-    -r, --retry [value]  Broken links are retried with new hostname
-    -s, --shallow        Do not check pages rooted outside of provided url
-    -h, --help           Output usage information
+    -V, --version             Output the version number
+    -r, --retry [value]       Broken links are retried with new hostname
+    -s, --shallow             Do not check pages rooted outside of provided url
+    -q, --quiet               Supress warnings and loading messages(for ci)
+    -m, --method [head|post]  HTTP method used to check links, defaults to head
+    --skip-images             Skip the image checks
+    -h, --help                output usage information
 ```
 
 Sample Output
