@@ -21,6 +21,7 @@ program
     'HTTP method used to check links, defaults to head'
   )
   .option('--skip-images', 'Skip the image checks')
+  .option('--skip-duplicates', 'Skip the duplicate page checks')
   .action(url => {
     givenUrl = url
   })
@@ -49,9 +50,10 @@ poke(
     quiet: program.quiet,
     method: program.method || 'head',
     skipImages: program.skipImages,
+    skipDuplicates: program.skipDuplicates,
     maxImageSize: program.maxImgSize || 500
   },
-  () => {
-    process.exit(0)
+  success => {
+    success ? process.exit(0) : process.exit(1)
   }
 )
